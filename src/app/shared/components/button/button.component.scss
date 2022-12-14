@@ -22,6 +22,10 @@
   font-weight: var(--font-weight);
   opacity: var(--opacity);
 
+  &.default-color {
+    color: var(--sidebar-item-font-color);
+  }
+
   display: flex;
   align-items: center;
   justify-content: var(--justify-content);

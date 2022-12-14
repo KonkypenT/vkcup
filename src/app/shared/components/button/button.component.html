@@ -1,4 +1,8 @@
-<button class="button" [class]="theme + ' ' + icon" [ngClass]="{ 'is-action': isAction }">
+<button
+  class="button"
+  [class]="theme + ' ' + icon"
+  [ngClass]="{ 'is-action': isAction, 'default-color': defaultColor }"
+>
   <span class="icon"></span>
   <span class="text">{{ text }}</span>
 </button>

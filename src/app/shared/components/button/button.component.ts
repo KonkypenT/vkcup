@@ -19,4 +19,7 @@ export class ButtonComponent {
 
   @Input()
   public isAction: boolean = false;
+
+  @Input()
+  public defaultColor: boolean = false;
 }
