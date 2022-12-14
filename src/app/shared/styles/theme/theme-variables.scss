@@ -1,0 +1,37 @@
+@import 'base-variables';
+
+:root {
+  /** Main colors */
+  --font-primary: #{$black-1};
+  --font-link: #{$blue-1};
+  --main-background: #{$white-2};
+
+  /** Header colors */
+  --header-background: #{$white-1};
+
+  /** Sidebar colors */
+  --sidebar-background: #{$white-2};
+  --sidebar-background-button: #{$white-1};
+  --sidebar-item-background-active: rgba(0, 16, 61, 0.08);
+  --sidebar-item-background-hover: rgba(0, 16, 61, 0.04);
+  --sidebar-item-font-color: #{$black-2};
+  --sidebar-separator-background: rgba(0, 16, 61, 0.12);
+
+  .dark-theme {
+    /** Main colors */
+    --font-primary: #{$white-3};
+    --font-link: #{$blue-3};
+    --main-background: #{$black-4};
+
+    /** Header colors */
+    --header-background: #{$black-3};
+
+    /** Sidebar colors */
+    --sidebar-background: #{$black-4};
+    --sidebar-background-button: #{$white-1};
+    --sidebar-item-background-active: rgba(255, 255, 255, 0.08);
+    --sidebar-item-background-hover: rgba(255, 255, 255, 0.04);
+    --sidebar-item-font-color: #{$white-1};
+    --sidebar-separator-background: rgba(0, 0, 0, 0.4);
+  }
+}

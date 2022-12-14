@@ -1,0 +1,59 @@
+<div class="container">
+  <app-button class="create-letter" [text]="'Написать письмо'" [icon]="iconsButton.CreateLetter"></app-button>
+
+  <div class="menu-items">
+    <app-sidebar-item
+      [text]="'Входящие'"
+      [icon]="iconsButton.Inbox"
+      [route]="routingName.inbox"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+    <app-sidebar-item
+      [text]="'Важное'"
+      [icon]="iconsButton.Important"
+      [route]="routingName.important"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+    <app-sidebar-item
+      [text]="'Отправленные'"
+      [icon]="iconsButton.Sent"
+      [route]="routingName.sent"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+    <app-sidebar-item
+      [text]="'Черновики'"
+      [icon]="iconsButton.Drafts"
+      [route]="routingName.drafts"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+    <app-sidebar-item
+      [text]="'Архив'"
+      [icon]="iconsButton.Archive"
+      [route]="routingName.archive"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+    <app-sidebar-item
+      [text]="'Спам'"
+      [icon]="iconsButton.Spam"
+      [route]="routingName.spam"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+    <app-sidebar-item
+      [text]="'Корзина'"
+      [icon]="iconsButton.Basket"
+      [route]="routingName.basket"
+      [currentRoute]="(currentCategory$ | async) || ''"
+      (chooseOption)="changeQuery($event)"
+    ></app-sidebar-item>
+  </div>
+
+  <div class="separator"></div>
+
+  <app-button class="create-folder" [text]="'Новая папка'" [icon]="iconsButton.Plus" [isAction]="true"></app-button>
+</div>

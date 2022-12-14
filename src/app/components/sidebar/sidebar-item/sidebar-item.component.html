@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [class]="theme + ' ' + icon"
+  [ngClass]="{ active: currentRoute === route }"
+  (click)="chooseOption.emit(route)"
+>
+  <span class="icon"></span>
+  <span class="text">{{ text }}</span>
+</button>

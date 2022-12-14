@@ -1,0 +1,75 @@
+@import 'mixins';
+
+:host {
+  --height: 36px;
+  --width: 200px;
+  --background-color: var(--sidebar-background-button);
+  --padding: 8px 15px;
+  --border-radius: 8px;
+  --border: 1px solid rgba(0, 16, 61, 0.12);
+  --justify-content: center;
+  --font-weight: normal;
+  --opacity: 1;
+}
+
+.button {
+  height: var(--height);
+  width: var(--width);
+  padding: var(--padding);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  border: var(--border);
+  font-weight: var(--font-weight);
+  opacity: var(--opacity);
+
+  display: flex;
+  align-items: center;
+  justify-content: var(--justify-content);
+  column-gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .icon {
+    display: none;
+  }
+
+  &.is-action .icon {
+    display: inline-block;
+  }
+
+  &.create-letter .icon {
+    @include prepend-svg('pencil');
+    width: 16px;
+    height: 16px;
+  }
+
+  &.plus .icon {
+    @include prepend-svg('plus');
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.dark-theme {
+  .button {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    .icon {
+      display: inline-block;
+    }
+
+    .text {
+      display: none;
+    }
+  }
+}

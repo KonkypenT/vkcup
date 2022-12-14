@@ -1,0 +1,104 @@
+@import 'mixins';
+
+:host {
+  --height: 36px;
+  --width: 200px;
+  --background-color: transparent;
+  --padding: 8px 15px;
+  --border-radius: 8px;
+}
+
+.button {
+  height: var(--height);
+  width: var(--width);
+  padding: var(--padding);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  transition: 300ms;
+
+  &.active {
+    background-color: var(--sidebar-item-background-active);
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: var(--sidebar-item-background-hover);
+  }
+
+  .icon {
+    display: inline-block;
+  }
+
+  &.inbox .icon {
+    @include prepend-svg('inbox');
+    width: 16px;
+    height: 14px;
+  }
+
+  &.important .icon {
+    @include prepend-svg('important');
+    width: 14px;
+    height: 14px;
+  }
+
+  &.sent .icon {
+    @include prepend-svg('sent');
+    width: 14px;
+    height: 14px;
+  }
+
+  &.drafts .icon {
+    @include prepend-svg('draft');
+    width: 14px;
+    height: 16px;
+  }
+
+  &.sent .icon {
+    @include prepend-svg('sent');
+    width: 14px;
+    height: 14px;
+  }
+
+  &.archive .icon {
+    @include prepend-svg('archive');
+    width: 14px;
+    height: 14px;
+  }
+
+  &.spam .icon {
+    @include prepend-svg('spam');
+    width: 15px;
+    height: 13px;
+  }
+
+  &.basket .icon {
+    @include prepend-svg('basket');
+    width: 12px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    .icon {
+      display: inline-block;
+    }
+
+    .text {
+      display: none;
+    }
+  }
+}
