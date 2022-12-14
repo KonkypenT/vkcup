@@ -47,6 +47,12 @@
     height: 16px;
   }
 
+  &.dark-theme {
+    &.plus .icon {
+      @include prepend-svg('plus-light');
+    }
+  }
+
   &.plus .icon {
     @include prepend-svg('plus');
     width: 10px;

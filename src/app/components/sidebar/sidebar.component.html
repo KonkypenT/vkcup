@@ -1,6 +1,11 @@
 <div class="container" [ngClass]="theme">
   <div class="main-content">
-    <app-button class="create-letter" [text]="'Написать письмо'" [icon]="iconsButton.CreateLetter"></app-button>
+    <app-button
+      class="create-letter"
+      [theme]="theme"
+      [text]="'Написать письмо'"
+      [icon]="iconsButton.CreateLetter"
+    ></app-button>
 
     <div class="menu-items">
       <app-sidebar-item
@@ -65,6 +70,7 @@
 
     <app-button
       class="create-folder"
+      [theme]="theme"
       [text]="'Новая папка'"
       [icon]="iconsButton.Plus"
       [isAction]="true"

@@ -43,6 +43,40 @@
     height: 14px;
   }
 
+  &.dark-theme {
+    &.inbox .icon {
+      @include prepend-svg('inbox-light');
+    }
+
+    &.important .icon {
+      @include prepend-svg('important-light');
+    }
+
+    &.sent .icon {
+      @include prepend-svg('sent-light');
+    }
+
+    &.drafts .icon {
+      @include prepend-svg('draft-light');
+    }
+
+    &.sent .icon {
+      @include prepend-svg('sent-light');
+    }
+
+    &.archive .icon {
+      @include prepend-svg('archive-light');
+    }
+
+    &.spam .icon {
+      @include prepend-svg('spam-light');
+    }
+
+    &.basket .icon {
+      @include prepend-svg('basket-light');
+    }
+  }
+
   &.important .icon {
     @include prepend-svg('important');
     width: 14px;
